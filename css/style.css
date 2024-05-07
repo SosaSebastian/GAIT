@@ -212,29 +212,3 @@ section > p {
  /* Menú Responsive */
 
  
-
- /*
-@media screen and (max-width: 860px) {
-  .navbar .all-links {
-    position: fixed;
-    left: -100%;
-    width: 300px;
-    display: block;
-    height: 100vh;
-    top: 75px;
-    background: #333;
-    transition: left 0.3s ease;
-  }
-
-  .navbar #menu-toggler:checked~.all-links {
-    left: 0;
-  }
-
-  .navbar .all-links li {
-    font-size: 18px;
-  }
-
-  .navbar #hamburger-btn {
-    display: block;
-  }
-}
