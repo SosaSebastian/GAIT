@@ -209,6 +209,20 @@ section > p {
     width: 100%;
  }
 
- /* Menú Responsive */
+ /* Base de datos html */
+
+.tablas {
+  background-color: #302b70;
+  color: antiquewhite;
+  padding-bottom: 60px;
+}
+.diccionario {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 60px;
+ }
+
 
  

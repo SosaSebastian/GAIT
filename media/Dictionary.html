@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="WB DataDic" />
+    <meta name="description" content="GAIT Data Dictionary." />
+    <title>GAIT Data Dictionary</title>
+    <style type="text/css">
+    table{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    abbr{
+        cursor: help;
+    }
+    table, td, th{
+        border-style: solid;
+        border-width: 1px;
+    }
+    table caption{
+        font-size: 120%;
+        font-weight: bold;
+    }
+    caption{
+        color: black;
+    }
+    td, th{
+        border-color: silver;
+    }
+    tr:hover{
+        color: #333;
+        background-color: #F2F2F2;
+    }
+    th{
+        background-color: silver;
+    }
+    td{
+        color: gray;
+    }
+    ul{
+        font-style: italic;
+    }
+    #title-sect{
+        color: gray;
+        text-align: right;
+    }
+    .proj-desc{
+        text-align: right;
+    }
+    </style>
+</head>
+<body>
+<div id="title-sect">
+<h1>GAIT<br> Data Dictionay</h1>
+<p>
+<em>2024-04-20</em>
+</p>
+<p class="proj-desc">
+<em></em>
+</p>
+</div>
+<h2>Alphabetic Index</h2>
+<ul>
+<li><a href='#Detalle de Producto'>Detalle de Producto</a></li>
+<li><a href='#Distribuidor'>Distribuidor</a></li>
+<li><a href='#Pago'>Pago</a></li>
+<li><a href='#Pedido'>Pedido</a></li>
+<li><a href='#Permisos'>Permisos</a></li>
+<li><a href='#Productos'>Productos</a></li>
+<li><a href='#Usuario'>Usuario</a></li>
+</ul>
+<table id='Detalle de Producto'>
+<caption>Detalle de Producto</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idDetalleProducto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Contiene la clave primaria para identificar de manera unica cada detalle de producto registrado. </td>
+</tr>
+<tr>
+    <td>Precio</td>
+    <td>DECIMAL</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Presenta el precio del producto especifico con el cual se registra el producto seleccionado. </td>
+</tr>
+<tr>
+    <td>Cantidad</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Indica la cantidad de unidades seleccionadas que haran parte del resultado del detalle de producto</td>
+</tr>
+<tr>
+    <td>Descuento</td>
+    <td>DECIMAL</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Registra el descuento que se aplica sobre el precio del producto seleccionado, teniendo en cuenta la informacion suministrada por la empresa.</td>
+</tr>
+<tr>
+    <td>Pedido_idPedido</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Referencia el pedido al que pertenece cada registro, permitiendo la conexion entre ambas tablas y teniendo en cuenta la relacion con cada pedido.</td>
+</tr>
+<tr>
+    <td>Productos_idProductos</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Genera la relacion entre esta tabla y la tabla de Productos directamente.</td>
+</tr>
+<table id='Distribuidor'>
+<caption>Distribuidor</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idDistribuidor</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identifica con un codigo unico el distribuidor, este codigo es directamente el NIT o Numero de ID de cada empresa registrada. Esta informacion es suministrada por la empresa. </td>
+</tr>
+<tr>
+    <td>NombreDistribuidor</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Describe el nombre con el cual se registra al distribuidor y/o cliente que se registra en la plataforma. </td>
+</tr>
+<tr>
+    <td>Ubicacion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identifica la ciudad, municipio o pueblo en el cual se encuentra ubicada la sede fisica del distribuidor y/o cliente registrado en la plataforma.</td>
+</tr>
+<tr>
+    <td>CorreoElectronico</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Muestra el correo electronico del distribuidor, este dato es escencial para temas legales de facturacion electronica presentados para la DIAN.</td>
+</tr>
+<table id='Pago'>
+<caption>Pago</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idPago</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Es una clave primaria utilizada para diferenciar y acceder a cada transaccion de pago de manera unica dentro del sistema.</td>
+</tr>
+<tr>
+    <td>FechaPago</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que registra la fecha y hora en que se genera el pago. Es un dato de tipo datetime que proporciona informacion sobre el momento de la transaccion.</td>
+</tr>
+<tr>
+    <td>MedioPago</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Indica el metodo utilizado por el cliente para realizar el pago. Puede incluir opciones como tarjeta de credito, transferencia bancaria, efectivo, entre otros.</td>
+</tr>
+<tr>
+    <td>EstadoPago</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Presenta el estado actual del pago. Puede contener valores como 'pendiente', 'procesado', 'rechazado', segun el estado de la transaccion de pago en el sistema.</td>
+</tr>
+<tr>
+    <td>idPedido</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Demuestra la relacion entre la tabla de Pedido y la tabla de Pago, esto se debe a que todo pago que se genere debe estar asociado a un pedido registrado en el sistema. </td>
+</tr>
+<table id='Pedido'>
+<caption>Pedido</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idPedido</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Clave primaria utilizada para generar un codigo unico de referencia que permite crear y acceder a cada pedido dentro del sistema.</td>
+</tr>
+<tr>
+    <td>FechaSalida</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo muestra la fecha de salida registrada al momento de generar el despacho del pedido.</td>
+</tr>
+<tr>
+    <td>FechaEntrega</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo muestra la fecha de entrega registrada al momento en el cual se recibe el pedido en la ubicacion de destino.</td>
+</tr>
+<tr>
+    <td>EstadoPedido</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Presenta el estado actual del pedido. Puede contener valores como 'pendiente', 'en reparto', 'entregado', segun la informacion que proporciona la transportadora por medio de la cual se envia el pedido.</td>
+</tr>
+<tr>
+    <td>idUsuario</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Clave foranea que establece una relacion con la tabla de usuario, vincular cada pedido con el usuario correspondiente en la base de datos.</td>
+</tr>
+<table id='Permisos'>
+<caption>Permisos</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idPermisos</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identifica con un codigo unico los diferentes tipos de permisos que tiene el usuario al ingresar a la plataforma</td>
+</tr>
+<tr>
+    <td>DescripcionPermiso</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>el tipo de permiso y las acciones que puede realizar el usuario. Estos permisos son establecidos al momento de crear el usuario en el sistema. </td>
+</tr>
+<table id='Productos'>
+<caption>Productos</caption>
+<tr><td colspan='11'>	</td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idProducto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identifica de forma unica cada producto registrado en el sistema, teniendo en cuenta la referencia en numeros de cada producto dado por la empresa. </td>
+</tr>
+<tr>
+    <td>NombreProducto</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Muestra el nombre del producto seleccionado que corresponde a cada "idProducto" proporcionado por la empresa. </td>
+</tr>
+<tr>
+    <td>CategoriaProducto</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Corresponde a la asignacion de la categoria a la cual hace parte el producto seleccionado. Estas categorias de producto son seleccionadas y establecidas por la empresa. </td>
+</tr>
+<tr>
+    <td>MarcaProducto</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Muestra a que marca pertenece cada producto, con el fin de presentar mas informacion al usuario. Esta descripcion de marca es establecida por la empresa.  </td>
+</tr>
+<table id='Usuario'>
+<caption>Usuario</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idUsuario</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identifica con un codigo unico el usuario, es un dato unico en la base de datos ya que tambien es una de las opciones de inicio de sesion</td>
+</tr>
+<tr>
+    <td>UsuarioNombre</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo almacena el nombre de usuario ingresado al momento del registro en el sistema.</td>
+</tr>
+<tr>
+    <td>UsuarioApellido</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo almacena el apellido de usuario ingresado al momento del registro en el sistema.</td>
+</tr>
+<tr>
+    <td>UsuarioEmail</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo guarda la direccion de correo electronico asociada a cada usuario. Se utiliza como medio de contacto, comunicacion con el usuario y es un dato unico en la base de datos ya que tambien es una de las opciones de inicio de sesion</td>
+</tr>
+<tr>
+    <td>UsuarioEstado</td>
+    <td>TINYINT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Presenta el estado actual del usuario. Puede contener valores como 'activo', 'en registro', 'inactivo', segun el estado del usuario en el sistema.</td>
+</tr>
+<tr>
+    <td>UsuarioTelefono</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Este campo registra el numero de telefono unico de cada usuario que se registra en el sistema.</td>
+</tr>
+<tr>
+    <td>idDistribuidor</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Clave foranea que registra la relacion entre esta tabla y la tabla "Distribuidor" permite asociar cada usuario con su respectiva empresa.</td>
+</tr>
+<tr>
+    <td>Permisos_idPerfil</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Clave foranea que identifica los permisos asignados a cada usuario en el sistema. La relacion entre estas tablas permite asociar cada usuario con sus permisos especifico y  las acciones que cada usuario puede realizar en el sistema.</td>
+</tr>
+<tr>
+    <td>UsuarioPassword</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Almacenar las contrasenas de los usuarios. Esta columna contiene valores encriptados.</td>
+</tr>
+</table>
+</body>
+</html>
