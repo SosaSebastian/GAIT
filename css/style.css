@@ -44,7 +44,7 @@ header {
   width: 100%;
   display: flex;
   position: fixed;
-  padding: 10px 80px;
+  padding: 10px 150px;
   align-items: center;
   background-color: grey;
   justify-content: space-between;
@@ -147,9 +147,11 @@ nav {
 
 section {
   display: flex;
-  padding-top: 100px;
+  min-height: 100vh;
+  padding-top: 120px;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 #videoB {
@@ -207,8 +209,9 @@ section > p {
 }
 
 #objetivos {
+  /* padding: 50px; */
+  justify-content: flex-start;
   background-color: var(--primary-color);
-  padding: 50px;
 }
 .speech {
   background-color: var(--primary-color);
@@ -242,7 +245,8 @@ footer {
   padding-bottom: 60px;
 }
 
-#objetivos-generales {
+#equipo {
   width: 90%;
   margin: auto;
+  justify-content: flex-start;
 }
