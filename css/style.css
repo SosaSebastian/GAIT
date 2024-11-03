@@ -1,9 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+:root {
+  --text-color: #020204;
+  --primary-color: #7552f2;
+  --secondary-color: #9f87f0;
+  --accent-color: #f2e252;
+  --border-color: #e0e0e0;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
   font-family: "Poppins", sans-serif;
 }
 
@@ -194,11 +213,11 @@ section > p {
 }
 
 #objetivos {
-  background-color: #302b70;
+  background-color: var(--primary-color);
   padding: 50px;
 }
 .speech {
-  background-color: #302b70;
+  background-color: var(--primary-color);
   padding: 50px;
   color: antiquewhite;
 }
@@ -207,7 +226,7 @@ section > p {
 /* Footer */
 
 footer {
-  background-color: #302b70;
+  background-color: var(--primary-color);
   padding: 15px 0;
   position: fixed;
   bottom: 0;
@@ -217,7 +236,7 @@ footer {
 /* Base de datos html */
 
 .tablas {
-  background-color: #302b70;
+  background-color: var(--primary-color);
   color: antiquewhite;
   padding-bottom: 60px;
 }
