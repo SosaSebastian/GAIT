@@ -46,11 +46,12 @@ header {
   position: fixed;
   padding: 10px 150px;
   align-items: center;
-  background-color: grey;
+  background-color: #3d2f65;
   justify-content: space-between;
 }
 
 .logo {
+  user-select: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,12 +72,11 @@ nav {
 
     li a {
       color: #fff;
-      font-weight: bold;
       text-decoration: none;
       transition: color 0.3s;
 
       &:hover {
-        color: darkviolet;
+        color: var(--accent-color);
       }
     }
   }
@@ -171,10 +171,10 @@ section > p {
 }
 
 .videosec {
+  width: 70rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 90%;
+  justify-content: center;
 }
 .videocard {
   display: flex;
@@ -209,25 +209,22 @@ section > p {
 }
 
 #objetivos {
-  /* padding: 50px; */
   justify-content: flex-start;
   background-color: var(--primary-color);
 }
+
 .speech {
-  background-color: var(--primary-color);
-  padding: 50px;
   color: antiquewhite;
+  background-color: var(--primary-color);
 }
 /* Equipo */
 
 /* Footer */
 
 footer {
-  background-color: var(--primary-color);
-  padding: 15px 0;
-  position: fixed;
-  bottom: 0;
   width: 100%;
+  padding: 15px 0;
+  background-color: var(--primary-color);
 }
 
 /* Base de datos html */
