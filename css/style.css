@@ -230,20 +230,34 @@ footer {
 /* Base de datos html */
 
 .tablas {
+  color: white;
+  padding-top: 120px;
+  justify-content: flex-start;
   background-color: var(--primary-color);
-  color: antiquewhite;
-  padding: 0 0 60px;
+
+  h2 {
+    margin-bottom: 6rem;
+  }
+
+  .img-mer {
+    user-select: none;
+    filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.4));
+  }
 }
+
 .diccionario {
   display: flex;
+  padding: 30px 0 60px;
   align-items: center;
   flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 60px;
 }
 
 #equipo {
   width: 90%;
   margin: auto;
   justify-content: flex-start;
+}
+
+.equipo-card {
+  width: 30rem;
 }
