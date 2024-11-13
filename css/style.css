@@ -261,3 +261,34 @@ footer {
 .equipo-card {
   width: 30rem;
 }
+
+.presentation {
+  width: 50rem;
+  margin: auto;
+  position: relative;
+  justify-content: flex-start;
+
+  .presentation-title {
+    margin-block: 4rem;
+  }
+  .presentation-content {
+    .presentation-text {
+      text-align: left;
+    }
+  }
+
+  .translate {
+    right: 0;
+    top: 8rem;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    background: transparent;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
