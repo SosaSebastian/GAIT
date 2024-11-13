@@ -1,0 +1,30 @@
+body {
+  background-color: #7552f2 !important;
+}
+
+.mockups {
+  color: white;
+  display: flex;
+  row-gap: 4rem;
+
+  .mockup {
+    gap: 4rem;
+    display: flex;
+    padding-inline: 4rem;
+
+    .mockup-content {
+      display: flex;
+      max-width: 28rem;
+      flex-direction: column;
+    }
+
+    .mockup-img {
+      width: 40rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .mockup-dashboard {
+    flex-direction: row-reverse;
+  }
+}
