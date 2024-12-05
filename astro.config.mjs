@@ -8,5 +8,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind(), icon()],
   base: "GAIT",
-  site: "https://SosaSebastian.github.io",
+  site: "https://sosasebastian.github.io",
 });
