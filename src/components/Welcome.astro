@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import Mockup from "@/assets/images/mockup.webp";
+---
+
+<main id="welcome" class="grid place-content-center min-h-screen text-white">
+  <div
+    class="flex justify-center items-center gap-x-16 max-md:flex-col max-md:gap-y-6"
+  >
+    <div class="flex flex-col gap-y-4 max-w-lg self-start max-md:self-center">
+      <h1 class="text-5xl text-pretty font-bold max-md:text-4xl">
+        Impulsa la Eficiencia Comercial y <span class="text-accent"
+          >Optimiza</span
+        > tu Red de Distribución
+      </h1>
+      <p class="text-pretty text-sm text-zinc-300">
+        Una plataforma diseñada para optimizar la gestión de ventas, fortalecer
+        la conexión con distribuidores y agilizar la distribución, llevando tu
+        negocio al siguiente nivel.
+      </p>
+      <a
+        href="#about"
+        class="bg-gradient-to-r from-primary from-0% to-secondary to-100% text-accent hover:saturate-150 transition-all duration-300 uppercase font-extrabold px-4 py-2 rounded-md self-start mt-2"
+      >
+        Conoce más</a
+      >
+    </div>
+    <Image
+      src={Mockup}
+      alt="Mockup"
+      loading="eager"
+      class="2xl:w-1/4 xl:w-1/3 max-md:w-1/2 w-1/3 rounded-md"
+    />
+  </div>
+</main>
+
+<style>
+  main {
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url("../assets/images/background.webp");
+  }
+</style>

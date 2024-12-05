@@ -1,0 +1,73 @@
+---
+import Rocket from "../components/Rocket.astro";
+---
+
+<section
+  id="about"
+  class="grid place-content-center gap-y-20 min-h-screen bg-gradient-to-t from-primary from-[-50%] to-transparent to-100% text-white"
+>
+  <h3 class="text-4xl font-bold text-center pb-4">Acerca de Gait</h3>
+  <div class="flex justify-center items-center gap-x-8">
+    <div class="max-w-lg self-start">
+      <div class="mb-4">
+        <h3 class="text-4xl mb-4 font-bold">¿Qué es Gait?</h3>
+        <p class="text-balance">
+          GAIT es una plataforma diseñada para llevar la gestión de ventas a un
+          nivel superior mediante la <span class="text-accent font-semibold"
+            >optimización
+          </span>de procesos comerciales, el fortalecimiento de la comunicación
+          con distribuidores y la mejora de la distribución de productos.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-4xl mb-4 font-bold">Justificación</h3>
+        <p class="text-balance">
+          Las empresas necesitan herramientas que les permitan optimizar su
+          gestión de ventas y mejorar sus canales de <span
+            class="text-accent font-semibold">distribución.</span
+          > GAIT responde a esta necesidad al ofrecer una plataforma que centraliza
+          la gestión de datos y pedidos, mejorando la relación con los distribuidores
+          y agilizando la entrega de productos.
+        </p>
+        <button
+          popovertarget="speech"
+          popovertargetaction="toggle"
+          class="bg-accent uppercase tracking-wide text-primary font-extrabold px-4 py-2 rounded-md mt-6"
+          >Speech</button
+        >
+      </div>
+    </div>
+    <div class="flex justify-center items-center">
+      <Rocket />
+    </div>
+  </div>
+  <dialog id="speech" class="w-3/4 rounded-md p-0 bg-transparent" popover>
+    <video class="w-full" src="/portfolio-gait/videos/speech.mp4" controls
+    ></video>
+  </dialog>
+</section>
+
+<style>
+  #speech {
+    scale: 0;
+    opacity: 0;
+    transition:
+      scale 0.4s ease-in-out,
+      display 0.4s ease-in-out allow-discrete,
+      opacity 0.4s ease-in-out;
+    &::backdrop {
+      backdrop-filter: blur(2px);
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &:popover-open {
+      scale: 1;
+      opacity: 1;
+
+      @starting-style {
+        scale: 0;
+        opacity: 0;
+      }
+    }
+  }
+</style>

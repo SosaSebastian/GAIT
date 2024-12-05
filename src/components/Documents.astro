@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+import MER from "@/assets/images/mer.svg";
+
+const documents = [
+  {
+    title: "Matriz DOFA",
+    description:
+      "Evaluación estratégica de fortalezas, oportunidades, debilidades y amenazas del proyecto.",
+  },
+  {
+    id: "characterization",
+    title: "Caracterización de la población",
+    description:
+      "Análisis detallado de los usuarios objetivo, incluyendo datos demográficos.",
+  },
+  {
+    id: "stages",
+    title: "Etapas de desarrollo",
+    description:
+      "Resumen de las fases clave del proyecto, desde la planeación hasta la implementación.",
+  },
+  {
+    id: "MER",
+    title: "Modelo Relacional",
+    description:
+      "Estructura técnica que define las relaciones entre los datos del sistema.",
+  },
+];
+---
+
+<section id="documents" class="grid place-content-center py-24 text-white">
+  <div class="grid grid-cols-3 gap-8 max-w-4xl">
+    <div class="info-documents col-span-2">
+      <h2 class="text-4xl font-bold mb-2">Documentos</h2>
+      <p class="max-w-md">
+        En esta sección encontrarás una recopilación organizada de los
+        documentos clave que respaldan el desarrollo del proyecto. Cada recurso
+        ha sido diseñado para proporcionar una visión más profunda y técnica de
+        los diferentes aspectos, desde la planificación y análisis hasta los
+        resultados obtenidos.
+      </p>
+    </div>
+    {
+      documents.map((document) => {
+        return (
+          <div class="flex flex-col justify-between bg-primary p-4 rounded-md shadow-lg shadow-dark">
+            <h3 class="font-bold text-lg">{document.title}</h3>
+            <p class="text-sm">{document.description}</p>
+            {document.title === "Matriz DOFA" ? (
+              <a
+                target="_blank"
+                href="https://academiausbbogedu-my.sharepoint.com/:x:/g/personal/jssosam_academia_usbbog_edu_co/ET6SZullc5lLuPDa7QqUqQYBaG6ItPOuun_cFh_Q8HLi0w?e=rXGNdV"
+                class="flex items-center justify-between gap-x-2 font-semibold rounded-md text-accent self-end"
+              >
+                Ver
+                <Icon name={"arrow"} />
+              </a>
+            ) : (
+              <button
+                popovertarget={document.id}
+                popovertargetaction="toggle"
+                class="flex items-center justify-between gap-x-2 font-semibold rounded-md text-accent self-end"
+              >
+                Ver
+                <Icon name={"arrow"} />
+              </button>
+            )}
+          </div>
+        );
+      })
+    }
+  </div>
+  <div popover id="characterization" class="w-4/5 h-4/5 p-0">
+    <iframe
+      width="100%"
+      height="100%"
+      src="/portfolio-gait/docs/characterization.pdf"></iframe>
+  </div>
+  <div popover id="stages" class="w-4/5 h-4/5 p-0">
+    <iframe width="100%" height="100%" src="/portfolio-gait/docs/stages.pdf"
+    ></iframe>
+  </div>
+  <div popover id="MER" class="bg-transparent p-0">
+    <Image src={MER} alt="Modelo Relacional" />
+  </div>
+</section>
+
+<style>
+  #characterization,
+  #stages,
+  #MER {
+    scale: 0;
+    opacity: 0;
+    transition:
+      scale 0.4s ease-in-out,
+      display 0.4s ease-in-out allow-discrete,
+      opacity 0.4s ease-in-out;
+    &::backdrop {
+      backdrop-filter: blur(2px);
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    &:popover-open {
+      scale: 1;
+      opacity: 1;
+
+      @starting-style {
+        scale: 0;
+        opacity: 0;
+      }
+    }
+  }
+</style>
