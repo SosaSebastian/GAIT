@@ -95,6 +95,11 @@ CREATE TABLE IF NOT EXISTS payments(
 
 
 -- Datos
+-- Insertando roles
+INSERT INTO roles (name, description) VALUES
+('admin', 'Administrador con control total sobre la cuenta del distribuidor, incluyendo la gestión de empleados y productos'),
+('viewer', 'Empleado con acceso solo de lectura para consultar pedidos, productos y reportes'),
+('moderator', 'Empleado con permisos intermedios, puede gestionar productos, ver pedidos y apoyar en la atención al cliente');
 
 -- Insertando categorías
 INSERT INTO categories (name, description) VALUES
